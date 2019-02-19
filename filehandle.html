@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect to AWS S3</title>
+</head>
+<body>
+<div class="container">
+    <label><b>Upload:</b></label>
+    <form id="uform" action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="uploaded_files/*" multiple>
+      <input type="submit" name="upload" value="upload" ><br><br>
+    </form>
+    <label><b>Enter table name:</b></label>
+    <form id="csvform" action="/csvupload" method="POST">
+        <input type="text" name="csvfile"><br> Count:{{ rdscount }}<br>
+        <input type="submit" name="submit" value="submit" ><br><br>
+
+    </form>
+    <label><b>Execute query with SQL</b></label>
+    <form id="sqlform" action="/sqlexecute" method="POST">
+       Limit: <input type="text" name="limit" value=" ">
+        <br> Time:{{ rdstime1 }}<br>
+        <input type="submit" name="execute" value="execute" ><br><br>
+    </form>
+    <label><b>Clean data</b></label>
+    <form id="clean" action="/cleanexecute" method="POST">
+       Input: <input type="text" name="limit" value=" ">
+        <input type="submit" name="execute" value="execute" ><br><br>
+    </form>
+
+   <!-- <label><b>Execute query with Memcached</b></label>
+    <form id="memform" action="/memexecute" method="POST">
+         Limit: <input type="text" name="limit" value=" ">
+        <br> Time:<br>
+        <input type="submit" name="execute" value="execute" ><br><br>
+    </form>-->
+    <label><b>Query 1:</b></label>
+    <form id="query1form" action="/query1" method="POST">
+         <input type="submit" name="execute" value="execute" ><br><br>
+    </form>
+    <label><b>Query 2:</b></label>
+    <form id="query2form" action="/query2" method="POST">
+        Value1: <input type="text" name="val1" value=" ">
+        Value2: <input type="text" name="val2" value=" ">
+        <input type="submit" name="execute" value="execute" ><br><br>
+    </form>
+    <label><b>Query 3:</b></label>
+    <form id="query3form" action="/query3" method="POST">
+         Value1: <input type="text" name="val1" value=" ">
+         Value2: <input type="text" name="val2" value=" ">
+         <input type="submit" name="execute" value="execute" >
+    </form>
+        <br> <br>
+        <label><b>Query 4:</b></label>
+    <form id="query4form" action="/query4" method="POST">
+         Value1: <input type="text" name="val1" value=" ">
+         Value2: <input type="text" name="val2" value=" ">
+        Value3: <input type="text" name="val3" value=" ">
+        <input type="submit" name="execute" value="execute" ><br><br>
+
+    </form>
+
+        <label><b>Query 5:</b></label>
+    <form id="query5form" action="/query5" method="POST">
+      Value1: <input type="text" name="val1" value=" ">
+         Value2: <input type="text" name="val2" value=" ">
+        <input type="submit" name="execute" value="execute" ><br><br>
+    </form>
+
+</div>
+</body>
+</body>
+</html>
